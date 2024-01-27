@@ -21,9 +21,12 @@ navbarPage(
              numericInput("n_d", label="時系列の長さ", value=100, min=100, max=1500, step=1),
              br(),
              br(),
-             actionButton("runculc", label="実行")  
+             actionButton("runculc", label="実行"),  
           )
-        )
+        ),
+        br(),
+        p("Rから以下のコードで実行すると、ローカルPCで動かすことができます。"),
+        p(code("if(require(shiny)){install.packages(\"shiny\")};runGitHub(\"ARIMAsim\", \"sb8001at\")"))
       ),
           
         mainPanel(
